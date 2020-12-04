@@ -6,7 +6,7 @@
   "scripts": {
     "start": "concurrently 'npm:mongoDB' 'npm:dev'",
     "dev": "MONGODB_URL=mongodb://localhost:27017 node dev.js",
-    "mongoDB": "docker run mongo"
+    "mongoDB": "docker run -p 27017:27017 mongo"
   },
   "author": "",
   "license": "ISC",

@@ -41,10 +41,14 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/", async (req, res) => {
-  const Note = require("./models/Note");
-  const note = new Note(req.body);
-  await note.save();
-  return res.send("Note saved. <a href=''>Refresh</a<");
+  try {
+    const Note = require("./models/Note");
+    const note = new Note(req.body);
+    await note.save();
+    return res.send("Note saved. <a href=''>Refresh</a<");
+  } catch (e) {
+    return res.send(e);
+  }
 });
 
 module.exports = app;
