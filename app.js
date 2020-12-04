@@ -1,21 +1,22 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
+
+app.use("/", express.static("./public"));
 
 app.get("/", async (req, res) => {
   try {
     const Note = require("./models/Note");
     const notes = await Note.find({});
-    notes && notes.forEach((n) => console.log(n.text));
     return res.status(200).send(
       `<!DOCTYPE html>
     <html lang="en">
   
     <head>
         <title>My Notes</title>
+        <link rel="stylesheet" href="index.css">
     </head>
 
     <body>
@@ -43,7 +44,7 @@ app.post("/", async (req, res) => {
   const Note = require("./models/Note");
   const note = new Note(req.body);
   await note.save();
-  return res.send("<a href=''>Refresh</a<");
+  return res.send("Note saved. <a href=''>Refresh</a<");
 });
 
 module.exports = app;

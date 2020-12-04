@@ -1,0 +1,33 @@
+html {
+  text-align: center;
+  background-color: #93c5fd;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 2rem;
+}
+
+textarea {
+  resize: none;
+  border: 2px solid #9ca3af;
+  border-radius: 4px;
+  background-color: #f3f4f6;
+  padding: 0.5rem;
+  width: 90%;
+}
+
+button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: #f3f4f6;
+  border: 2px solid #9ca3af;
+  color: #4b5563;
+  border-radius: 4px;
+}
+
+p {
+  border-bottom: 2px solid;
+  padding: 1rem;
+  text-align: left;
+}

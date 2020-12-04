@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Notes</title>
+    <style>
+        html {
+            text-align: center;
+            background-color: #93C5FD;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            font-size: 2rem;
+        }
+
+        textarea {
+            resize: none;
+            border: 2px solid #9CA3AF;
+            border-radius: 4px;
+            background-color: #F3F4F6;
+            padding: 0.5rem;
+            width: 90%;
+        }
+
+        button {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            background-color: #F3F4F6;
+            border: 2px solid #9CA3AF;
+            color: #4B5563;
+            border-radius: 4px;
+        }
+
+        p {
+            border-bottom: 2px solid;
+            padding: 1rem;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>MY NOTES</h1>
+
+    <form method="POST">
+        <div>
+            <textarea required name="text" rows="5" placeholder="Create a new note"></textarea>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+
+    <p>Here is my first note!</p>
+    <p>This is my second note!</p>
+
+</body>
+
+</html>
